@@ -8,3 +8,8 @@
     --border-radius: 12px;
     --cell-padding: 1vh 4vw;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
