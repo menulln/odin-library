@@ -61,6 +61,10 @@ table {
     border-spacing: 0;
 }
 
+tr:nth-child(even) {
+    background-color: var(--gray);
+}
+
 th {
     background-color: var(--primary-color);
     color: var(--white);
