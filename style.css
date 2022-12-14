@@ -1,1 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --white: #FAFAFA;
+    --gray: #F0F0F0;
+    --black: #0A0A0A;
+    --primary-color: #362F4B;
+    --border-radius: 12px;
+    --cell-padding: 1vh 4vw;
+}
