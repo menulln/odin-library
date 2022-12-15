@@ -27,7 +27,10 @@
         </table>
     </main>
     <div class="modal">
-        <h1>Add a book</h1>
+        <div class="modal-header">
+            <h1>Add a book</h1>
+            <span aria-label="close">&#10006;</span>
+        </div>
         <form action="">
             <div class="title">
                 <label for="title">Title:</label>
@@ -42,11 +45,17 @@
                 <input type="text" id="pages" placeholder="173">
             </div>
             <div class="read">
-                <label for="read">Read:</label>
-                <select id="read">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
+                <p>Read:</p>
+                <div class="radio-options">
+                    <div class="yes">
+                        <input type="radio" name="read" id="yes" value="true">
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="no">
+                        <input type="radio" name="read" id="no" value="false">
+                        <label for="no">No</label>
+                    </div>
+                </div>
             </div>
             <div class="submit">
                 <button type="button" id="submit">Add Book</button>
