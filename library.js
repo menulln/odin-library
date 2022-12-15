@@ -42,6 +42,11 @@ function closeModal() {
     modal.style.cssText = 'visibility: hidden;';
 }
 
+function reloadCss() {
+    let stylesheet = document.querySelector('link');
+    stylesheet.href += '';
+}
+
 buttonAdd.addEventListener('click', (e) => {
     const modal = document.querySelector('.modal');
     const modalClose = modal.querySelector('span');
@@ -58,6 +63,7 @@ buttonSubmit.addEventListener('click', (e) => {
     const read = (document.querySelector('input[name="read"]:checked').value === null) ? false : document.querySelector('input[name="read"]:checked').value;
     addToLibrary(title, author, pages, read);
     renderBooks();
+    reloadCss();
     resetModalFields();
     closeModal();
 });
