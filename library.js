@@ -1,7 +1,7 @@
 const table = document.querySelector('tbody');
 const buttonAdd = document.querySelector('.button-add');
 const buttonSubmit = document.querySelector('#submit');
-const books = [];
+let books = [];
 
 function Book(title, author, pages, read) {
     this.title = title,
@@ -28,6 +28,7 @@ function renderBooks() {
             tableRow.appendChild(tableData);
         }  
     });
+    books = [];
 }
 
 buttonAdd.addEventListener('click', (e) => {
