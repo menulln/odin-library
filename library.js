@@ -1,4 +1,5 @@
 const table = document.querySelector('tbody');
+const buttonAdd = document.querySelector('.button-add');
 const books = [];
 
 function Book(title, author, pages, read) {
@@ -27,3 +28,8 @@ function renderBooks() {
         }  
     });
 }
+
+buttonAdd.addEventListener('click', (e) => {
+    const modal = document.querySelector('.modal');
+    modal.style.cssText = 'visibility: visible;';
+});
