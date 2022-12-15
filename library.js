@@ -31,6 +31,17 @@ function renderBooks() {
     books = [];
 }
 
+function resetModalFields() {
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+    document.querySelector('#pages').value = '';
+}
+
+function closeModal() {
+    const modal = document.querySelector('.modal');
+    modal.style.cssText = 'visibility: hidden;';
+}
+
 buttonAdd.addEventListener('click', (e) => {
     const modal = document.querySelector('.modal');
     const modalClose = modal.querySelector('span');
@@ -47,4 +58,6 @@ buttonSubmit.addEventListener('click', (e) => {
     const read = (document.querySelector('input[name="read"]:checked').value === null) ? false : document.querySelector('input[name="read"]:checked').value;
     addToLibrary(title, author, pages, read);
     renderBooks();
+    resetModalFields();
+    closeModal();
 });
