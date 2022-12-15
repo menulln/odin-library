@@ -31,7 +31,8 @@ h1 {
     font-size: calc(0.85rem + 0.85vw);
 }
 
-.button-add {
+.button-add,
+#submit {
     width: 1.5vw;
     height: 1.5vw;
     background-color: #2ea44f;
@@ -43,16 +44,19 @@ h1 {
     font-weight: 700;
 }
 
-.button-add:hover {
+.button-add:hover,
+#submit {
     background-color: #2c974b;
 }
 
-.button-add:focus {
+.button-add:focus,
+#submit {
     box-shadow: rgba(46, 164, 79, .4) 0 0 0 2px;
     outline: none;
 }
   
-.button-add:active {
+.button-add:active,
+#submit {
     background-color: #298e46;
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
@@ -95,4 +99,77 @@ tr:last-of-type > td:first-of-type {
 
 tr:last-of-type > td:last-of-type {
     border-bottom-right-radius: var(--border-radius);
+}
+
+.modal {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    padding: 1% 4% 0 4%;
+    border: 1px solid var(--black);
+    border-radius: var(--border-radius);
+}
+
+.modal-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5% 0 4% 0;
+}
+
+.modal > h1 {
+    margin: 2% 0 3% 0;
+}
+
+form {
+    width: 100%;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.submit {
+    justify-content: end;
+}
+
+#submit {
+    margin-bottom: 0;
+}
+
+label,
+div > p {
+    font-size: calc(0.6rem + 0.6vw);
+}
+
+input[type="text"] {
+    width: 70%;
+    min-height: 3vh;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--black);
+    padding: 0.5% 2%;
+}
+
+.radio-options > div {
+    display: inline;
+}
+
+.radio-options > div > label {
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+.yes {
+    padding-right: 1vw;
+}
+
+#submit {
+    width: 5.75vw;
+    height: 1.75vw;
+    font-weight: 400;
 }
