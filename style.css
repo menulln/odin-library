@@ -128,6 +128,10 @@ tr:last-of-type > td:last-of-type {
     margin: 2% 0 3% 0;
 }
 
+.modal > span {
+    cursor: pointer;
+}
+
 form {
     width: 100%;
 }
