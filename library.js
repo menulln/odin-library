@@ -31,5 +31,9 @@ function renderBooks() {
 
 buttonAdd.addEventListener('click', (e) => {
     const modal = document.querySelector('.modal');
+    const modalClose = modal.querySelector('span');
     modal.style.cssText = 'visibility: visible;';
+    modalClose.addEventListener('click', (e) => {
+        modal.style.cssText = 'visibility: hidden;';
+    });
 });
