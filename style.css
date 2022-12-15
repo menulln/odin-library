@@ -2,7 +2,7 @@
 
 :root {
     --white: #FAFAFA;
-    --gray: #F0F0F0;
+    --gray: #E2E2E2;
     --black: #0A0A0A;
     --primary-color: #362F4B;
     --border-radius: 12px;
@@ -16,8 +16,11 @@
 
 body {
     display: grid;
-    place-content: center;
+    justify-content: center;
+    align-content: start;
     font-family: 'Ubuntu';
+    height: 100vh;
+    background: linear-gradient(25deg, #4154CF, #CA54C2);
 }
 
 header {
@@ -28,6 +31,7 @@ header {
 }
 
 h1 {
+    color: var(--black);
     font-size: calc(0.85rem + 0.85vw);
 }
 
@@ -67,6 +71,10 @@ table {
 
 tr:nth-child(even) {
     background-color: var(--gray);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--white);
 }
 
 th {
@@ -157,6 +165,7 @@ form > div {
 label,
 div > p {
     font-size: calc(0.6rem + 0.6vw);
+    color: var(--black);
 }
 
 input[type="text"] {
