@@ -45,4 +45,6 @@ buttonSubmit.addEventListener('click', (e) => {
     const author = (document.querySelector('#author').value === '') ? 'Unknown Author' : document.querySelector('#author').value;
     const pages = (document.querySelector('#pages').value === '') ? 'Unknown Pages' : document.querySelector('#pages').value;
     const read = (document.querySelector('input[name="read"]:checked').value === null) ? false : document.querySelector('input[name="read"]:checked').value;
+    addToLibrary(title, author, pages, read);
+    renderBooks();
 });
