@@ -3,32 +3,38 @@ const buttonAdd = document.querySelector('.button-add');
 const buttonSubmit = document.querySelector('#submit');
 let books = [];
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, read, rendered) {
     this.title = title,
     this.author = author,
     this.pages = pages,
-    this.read = read
+    this.read = read,
+    this.isRendered = rendered
 }
 
-function addToLibrary(title, author, pages, read) {
+function addToLibrary(title, author, pages, read, rendered) {
     const temp = Object.create(Book.prototype, { title: { value: title, enumerable: true },
                                        author: { value: author, enumerable: true },
                                        pages: { value: pages, enumerable: true },
-                                       read: { value: read, enumerable: true } });
+                                       read: { value: read, enumerable: true },
+                                       isRendered: { value: rendered, enumerable: true }  });
     books.push(temp);
 }
 
 function renderBooks() {
     books.forEach( (book) => {
-        const tableRow = document.createElement('tr');
-        table.appendChild(tableRow);      
-        for (const property in book) {
-            const tableData = document.createElement('td');
-            tableData.textContent = book[property];
-            tableRow.appendChild(tableData);
-        }  
+        if (!(book.isRendered)) {
+            const tableRow = document.createElement('tr');
+            table.appendChild(tableRow);      
+            for (const property in book) {
+                if (property !== 'isRendered') {
+                    const tableData = document.createElement('td');
+                    tableData.textContent = book[property];
+                    tableRow.appendChild(tableData);
+                } 
+            } 
+        }
     });
-    books = [];
+    books = books.map( (book) => book.isRendered = true);
 }
 
 function resetModalFields() {
@@ -61,9 +67,17 @@ buttonSubmit.addEventListener('click', (e) => {
     const author = (document.querySelector('#author').value === '') ? 'Unknown Author' : document.querySelector('#author').value;
     const pages = (document.querySelector('#pages').value === '') ? 'Unknown Pages' : document.querySelector('#pages').value;
     const read = (document.querySelector('input[name="read"]:checked').value === null) ? false : document.querySelector('input[name="read"]:checked').value;
-    addToLibrary(title, author, pages, read);
+    addToLibrary(title, author, pages, read, false);
     renderBooks();
     reloadCss();
     resetModalFields();
     closeModal();
 });
+
+addToLibrary('test', 'test', 300, false, false);
+addToLibrary('yee', 'yee', 3020, true, false);
+addToLibrary('ffds', 'rvd', 3600, false, false);
+addToLibrary('uuuuu', 'fdddd', 3300, true, false);
+addToLibrary('rr', 'hyrxh', 3010, false, false);
+
+renderBooks();
