@@ -34,6 +34,10 @@ function renderBooks() {
                 toggleRead.classList.toggle( (book[property] === 'true') ? 'true' : 'false');
                 tableData.appendChild(toggleRead);
                 tableRow.appendChild(tableData);
+                toggleRead.addEventListener('click', (e) => {
+                    toggleRead.classList.toggle('true');
+                    toggleRead.classList.toggle('false');
+                });
             }
         }
         const tableData = document.createElement('td');
