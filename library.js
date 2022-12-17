@@ -27,6 +27,11 @@ function renderBooks() {
             tableData.textContent = book[property];
             tableRow.appendChild(tableData);
         }
+        const tableData = document.createElement('td');
+        const buttonDelete = document.createElement('button');
+        buttonDelete.textContent = 'Delete';
+        tableData.appendChild(buttonDelete);
+        tableRow.appendChild(tableData);
     }); 
     books = [];
 }
