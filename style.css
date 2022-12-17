@@ -108,6 +108,32 @@ tr:last-of-type > td:last-of-type {
     border-bottom-right-radius: var(--border-radius);
 }
 
+.delete {
+    width: 5vw;
+    height: 1.5vw;
+    background-color: #dc3545;
+    border: 1px solid rgba(35, 27, 27, 0.15);
+    border-radius: 6px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: calc(0.45rem + 0.45vw);
+    font-weight: 400;
+}
+
+.delete:hover {
+    background-color: #be303e;
+}
+
+.delete:focus {
+    box-shadow: rgba(164, 46, 46, 0.4) 0 0 0 2px;
+    outline: none;
+}
+  
+.delete:active {
+    background-color: #ad2b38;
+    box-shadow: rgba(70, 20, 20, 0.2) 0 1px 0 inset;
+}
+
 .modal {
     justify-self: center;
     display: flex;
