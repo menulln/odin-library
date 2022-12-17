@@ -77,11 +77,3 @@ buttonSubmit.addEventListener('click', (e) => {
     resetModalFields();
     closeModal();
 });
-
-addToLibrary('test', 'test', 300, false);
-addToLibrary('yee', 'yee', 3020, true);
-addToLibrary('ffds', 'rvd', 3600, false);
-addToLibrary('uuuuu', 'fdddd', 3300, true);
-addToLibrary('rr', 'hyrxh', 3010, false);
-
-renderBooks();
