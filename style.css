@@ -36,7 +36,8 @@ h1 {
 }
 
 .button-add,
-#submit {
+#submit,
+.true {
     width: 1.5vw;
     height: 1.5vw;
     background-color: #2ea44f;
@@ -49,18 +50,21 @@ h1 {
 }
 
 .button-add:hover,
-#submit:hover {
+#submit:hover,
+.true:hover {
     background-color: #2c974b;
 }
 
 .button-add:focus,
-#submit:focus {
+#submit:focus,
+.true:focus {
     box-shadow: rgba(46, 164, 79, .4) 0 0 0 2px;
     outline: none;
 }
   
 .button-add:active,
-#submit:active {
+#submit:active,
+.true:active {
     background-color: #298e46;
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
@@ -108,7 +112,8 @@ tr:last-of-type > td:last-of-type {
     border-bottom-right-radius: var(--border-radius);
 }
 
-.delete {
+.delete,
+.false {
     width: 5vw;
     height: 1.5vw;
     background-color: #dc3545;
@@ -120,18 +125,26 @@ tr:last-of-type > td:last-of-type {
     font-weight: 400;
 }
 
-.delete:hover {
+.delete:hover,
+.false:hover {
     background-color: #be303e;
 }
 
-.delete:focus {
+.delete:focus,
+.false:focus {
     box-shadow: rgba(164, 46, 46, 0.4) 0 0 0 2px;
     outline: none;
 }
   
-.delete:active {
+.delete:active,
+.false:active {
     background-color: #ad2b38;
     box-shadow: rgba(70, 20, 20, 0.2) 0 1px 0 inset;
+}
+
+.false {
+    width: 1.5vw;
+    height: 1.5vw;
 }
 
 .modal {
