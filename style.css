@@ -21,6 +21,8 @@ body {
     font-family: 'Ubuntu';
     height: 100vh;
     background: linear-gradient(25deg, #4154CF, #CA54C2);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -71,6 +73,7 @@ h1 {
 
 table {
     border-spacing: 0;
+    margin-bottom: 1vw;
 }
 
 tr:nth-child(even) {
