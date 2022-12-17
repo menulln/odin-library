@@ -23,9 +23,18 @@ function renderBooks() {
         const tableRow = document.createElement('tr');
         table.appendChild(tableRow);      
         for (const property in book) {
-            const tableData = document.createElement('td');
-            tableData.textContent = book[property];
-            tableRow.appendChild(tableData);
+            if (property !== 'read') {
+                const tableData = document.createElement('td');
+                tableData.textContent = book[property];
+                tableRow.appendChild(tableData);
+            } else {
+                const tableData = document.createElement('td');
+                const toggleRead = document.createElement('button');
+                console.log(book[property]);
+                toggleRead.classList.toggle( (book[property] === 'true') ? 'true' : 'false');
+                tableData.appendChild(toggleRead);
+                tableRow.appendChild(tableData);
+            }
         }
         const tableData = document.createElement('td');
         const buttonDelete = document.createElement('button');
