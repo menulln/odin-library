@@ -30,7 +30,6 @@ function renderBooks() {
             } else {
                 const tableData = document.createElement('td');
                 const toggleRead = document.createElement('button');
-                console.log(book[property]);
                 toggleRead.classList.toggle( (book[property] === 'true') ? 'true' : 'false');
                 tableData.appendChild(toggleRead);
                 tableRow.appendChild(tableData);
