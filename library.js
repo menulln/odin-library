@@ -32,6 +32,10 @@ function renderBooks() {
         buttonDelete.textContent = 'Delete';
         tableData.appendChild(buttonDelete);
         tableRow.appendChild(tableData);
+        buttonDelete.addEventListener('click', (e) => {
+            e.path[2].remove();
+            reloadCss();
+        });
     }); 
     books = [];
 }
