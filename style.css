@@ -101,6 +101,7 @@ td {
     color: var(--black);
     padding: var(--cell-padding);
     font-size: calc(0.5rem + 0.5vw);
+    text-align: center;
 }
 
 tr:last-of-type > td:first-of-type {
