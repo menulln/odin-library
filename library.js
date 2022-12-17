@@ -30,6 +30,7 @@ function renderBooks() {
         const tableData = document.createElement('td');
         const buttonDelete = document.createElement('button');
         buttonDelete.textContent = 'Delete';
+        buttonDelete.classList.add('delete');
         tableData.appendChild(buttonDelete);
         tableRow.appendChild(tableData);
         buttonDelete.addEventListener('click', (e) => {
